@@ -23,14 +23,6 @@ namespace DL.Issues.AspNetCore.Mvc.CustomRouting
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -47,10 +39,14 @@ namespace DL.Issues.AspNetCore.Mvc.CustomRouting
             }
 
             app.UseStaticFiles();
-            app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "test",
+                    template: "david/liang/{type}",
+                    defaults: new { area = "", controller = "home", action = "about" });
+
                 routes.MapRoute(
                     name: "productListByTypeRoute",
                     template: "products/{type}",
@@ -67,6 +63,11 @@ namespace DL.Issues.AspNetCore.Mvc.CustomRouting
                     name: "productDetailsRoute",
                     template: "products/{type}/{category}/{product}",
                     defaults: new { area = "", controller = "products", action = "details" }
+                );
+
+                routes.MapRoute(
+                    name: "areaRoute",
+                    template: "{area:exists}/{controller=dashboard}/{action=index}/{id?}"
                 );
 
                 routes.MapRoute(

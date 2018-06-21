@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DL.Issues.AspNetCore.Mvc.CustomRouting", "DL.Issues.AspNetCore.Mvc.CustomRouting\DL.Issues.AspNetCore.Mvc.CustomRouting.csproj", "{E9B724E9-F619-4B3D-96DA-6CDE9F2F9662}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DL.Framework.Mvc", "DL.Framework.Mvc\DL.Framework.Mvc.csproj", "{38B07622-F2A7-48E3-BA9D-C4480335A8FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E9B724E9-F619-4B3D-96DA-6CDE9F2F9662}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9B724E9-F619-4B3D-96DA-6CDE9F2F9662}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9B724E9-F619-4B3D-96DA-6CDE9F2F9662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B07622-F2A7-48E3-BA9D-C4480335A8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B07622-F2A7-48E3-BA9D-C4480335A8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B07622-F2A7-48E3-BA9D-C4480335A8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B07622-F2A7-48E3-BA9D-C4480335A8FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
