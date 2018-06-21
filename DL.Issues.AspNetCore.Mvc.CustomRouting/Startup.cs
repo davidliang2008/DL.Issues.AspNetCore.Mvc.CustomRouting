@@ -52,6 +52,24 @@ namespace DL.Issues.AspNetCore.Mvc.CustomRouting
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "productListByTypeRoute",
+                    template: "products/{type}",
+                    defaults: new { area = "", controller = "products", action = "listByType" }
+                );
+
+                routes.MapRoute(
+                    name: "productListByCategoryRoute",
+                    template: "products/{type}/{category}",
+                    defaults: new { area = "", controller = "products", action = "listByCategory" }
+                );
+
+                routes.MapRoute(
+                    name: "productDetailsRoute",
+                    template: "products/{type}/{category}/{product}",
+                    defaults: new { area = "", controller = "products", action = "details" }
+                );
+
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
